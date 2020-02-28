@@ -81,7 +81,6 @@ init()
 	level.last_powerup = false;
 	level.powerup_overrides = [];
 
-	level thread remove_carpenter();
 	level thread add_powerup_later("fire_sale");
 	level thread add_powerup_later("minigun");
 }
@@ -107,11 +106,7 @@ init_powerups()
 	add_zombie_powerup( "insta_kill", 	"zombie_skull",		&"ZOMBIE_POWERUP_INSTA_KILL", false, false, false );
 	add_zombie_powerup( "double_points","zombie_x2_icon",	&"ZOMBIE_POWERUP_DOUBLE_POINTS", false, false, false );
 	add_zombie_powerup( "full_ammo",  	"zombie_ammocan",	&"ZOMBIE_POWERUP_MAX_AMMO", false, false, false );
-
-	/*if( !level.mutators["mutator_noBoards"] )
-	{
-		add_zombie_powerup( "carpenter",  	"zombie_carpenter",	&"ZOMBIE_POWERUP_MAX_AMMO", false, false, false );
-	}*/
+	add_zombie_powerup( "carpenter",  	"zombie_carpenter",	&"ZOMBIE_POWERUP_MAX_AMMO", false, false, false );
 
 	//GZheng - Temp VO
 	//add the correct VO for firesale in the 3rd parameter of this function.
